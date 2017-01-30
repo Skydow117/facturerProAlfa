@@ -1,0 +1,12 @@
+c:\users\david castillo\documents\visual studio 2015\Projects\FacturerPro\FacturerPro\bin\Debug\FacturerPro.exe.config
+c:\users\david castillo\documents\visual studio 2015\Projects\FacturerPro\FacturerPro\bin\Debug\FacturerPro.exe
+c:\users\david castillo\documents\visual studio 2015\Projects\FacturerPro\FacturerPro\bin\Debug\FacturerPro.pdb
+c:\users\david castillo\documents\visual studio 2015\Projects\FacturerPro\FacturerPro\obj\Debug\FacturerPro.csprojResolveAssemblyReference.cache
+c:\users\david castillo\documents\visual studio 2015\Projects\FacturerPro\FacturerPro\obj\Debug\FacturerPro.Form1.resources
+c:\users\david castillo\documents\visual studio 2015\Projects\FacturerPro\FacturerPro\obj\Debug\FacturerPro.Properties.Resources.resources
+c:\users\david castillo\documents\visual studio 2015\Projects\FacturerPro\FacturerPro\obj\Debug\FacturerPro.csproj.GenerateResource.Cache
+c:\users\david castillo\documents\visual studio 2015\Projects\FacturerPro\FacturerPro\obj\Debug\FacturerPro.exe
+c:\users\david castillo\documents\visual studio 2015\Projects\FacturerPro\FacturerPro\obj\Debug\FacturerPro.pdb
+C:\Users\David Castillo\Source\Repos\facturerProAlfa\FacturerPro\FacturerPro\bin\Debug\FacturerPro.exe.config
+C:\Users\David Castillo\Source\Repos\facturerProAlfa\FacturerPro\FacturerPro\obj\Debug\FacturerPro.exe
+C:\Users\David Castillo\Source\Repos\facturerProAlfa\FacturerPro\FacturerPro\obj\Debug\FacturerPro.pdb
