@@ -36,20 +36,23 @@ namespace FacturerPro
 
         }
 
-        private void tabControl1_TabIndexChanged(object sender, EventArgs e)
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Console.WriteLine("Hola");
 
-            switch (tabControl1.TabIndex) {
-                case 1:
+            switch (tabControl1.SelectedIndex)
+            {
+                case 0:
                     clientsBindingNavigator.BindingSource = clientsBindingSource;
-                    Console.WriteLine("Canvia");
+                    Console.WriteLine("0");
+                    break;
+                case 1:
+                    clientsBindingNavigator.BindingSource = productesBindingSource;
+                    Console.WriteLine("1");
                     break;
                 case 2:
-                    clientsBindingNavigator.BindingSource = productesBindingSource;
-                    break;
-                case 3:
                     clientsBindingNavigator.BindingSource = facturaBindingSource;
+                    Console.WriteLine("2");
                     break;
             }
         }

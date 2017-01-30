@@ -54,6 +54,13 @@
             this.preuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.facturaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientsTableAdapter = new FacturerPro.pcgroundDataSetTableAdapters.clientsTableAdapter();
             this.tableAdapterManager = new FacturerPro.pcgroundDataSetTableAdapters.TableAdapterManager();
             this.productesTableAdapter = new FacturerPro.pcgroundDataSetTableAdapters.productesTableAdapter();
@@ -82,14 +89,7 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facturaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.facturaTableAdapter = new FacturerPro.pcgroundDataSetTableAdapters.facturaTableAdapter();
-            this.facturaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -100,10 +100,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.productesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productesBindingSource)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingNavigator)).BeginInit();
             this.clientsBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facturaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -131,7 +131,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(729, 393);
             this.tabControl1.TabIndex = 0;
-            this.tabControl1.TabIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -302,6 +302,58 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // facturaDataGridView
+            // 
+            this.facturaDataGridView.AutoGenerateColumns = false;
+            this.facturaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.facturaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19});
+            this.facturaDataGridView.DataSource = this.facturaBindingSource;
+            this.facturaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.facturaDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.facturaDataGridView.Name = "facturaDataGridView";
+            this.facturaDataGridView.Size = new System.Drawing.Size(715, 361);
+            this.facturaDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "n_Factura";
+            this.dataGridViewTextBoxColumn15.HeaderText = "n_Factura";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "id_Client";
+            this.dataGridViewTextBoxColumn16.HeaderText = "id_Client";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Data";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Data";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Descompte";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Descompte";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "IVA";
+            this.dataGridViewTextBoxColumn19.HeaderText = "IVA";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // facturaBindingSource
+            // 
+            this.facturaBindingSource.DataMember = "factura";
+            this.facturaBindingSource.DataSource = this.pcgroundDataSet;
             // 
             // clientsTableAdapter
             // 
@@ -544,61 +596,9 @@
             this.dataGridViewTextBoxColumn14.HeaderText = "Preu";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
-            // facturaBindingSource
-            // 
-            this.facturaBindingSource.DataMember = "factura";
-            this.facturaBindingSource.DataSource = this.pcgroundDataSet;
-            // 
             // facturaTableAdapter
             // 
             this.facturaTableAdapter.ClearBeforeFill = true;
-            // 
-            // facturaDataGridView
-            // 
-            this.facturaDataGridView.AutoGenerateColumns = false;
-            this.facturaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.facturaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19});
-            this.facturaDataGridView.DataSource = this.facturaBindingSource;
-            this.facturaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.facturaDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.facturaDataGridView.Name = "facturaDataGridView";
-            this.facturaDataGridView.Size = new System.Drawing.Size(715, 361);
-            this.facturaDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "n_Factura";
-            this.dataGridViewTextBoxColumn15.HeaderText = "n_Factura";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "id_Client";
-            this.dataGridViewTextBoxColumn16.HeaderText = "id_Client";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Data";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Data";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Descompte";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Descompte";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "IVA";
-            this.dataGridViewTextBoxColumn19.HeaderText = "IVA";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
             // Form1
             // 
@@ -620,11 +620,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.productesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productesBindingSource)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.facturaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingNavigator)).EndInit();
             this.clientsBindingNavigator.ResumeLayout(false);
             this.clientsBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.facturaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facturaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
