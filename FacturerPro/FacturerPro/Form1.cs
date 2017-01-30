@@ -27,11 +27,31 @@ namespace FacturerPro
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'pcgroundDataSet.factura' table. You can move, or remove it, as needed.
+            this.facturaTableAdapter.Fill(this.pcgroundDataSet.factura);
             // TODO: This line of code loads data into the 'pcgroundDataSet.productes' table. You can move, or remove it, as needed.
             this.productesTableAdapter.Fill(this.pcgroundDataSet.productes);
             // TODO: This line of code loads data into the 'pcgroundDataSet.clients' table. You can move, or remove it, as needed.
             this.clientsTableAdapter.Fill(this.pcgroundDataSet.clients);
 
+        }
+
+        private void tabControl1_TabIndexChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine("Hola");
+
+            switch (tabControl1.TabIndex) {
+                case 1:
+                    clientsBindingNavigator.BindingSource = clientsBindingSource;
+                    Console.WriteLine("Canvia");
+                    break;
+                case 2:
+                    clientsBindingNavigator.BindingSource = productesBindingSource;
+                    break;
+                case 3:
+                    clientsBindingNavigator.BindingSource = facturaBindingSource;
+                    break;
+            }
         }
     }
 }
